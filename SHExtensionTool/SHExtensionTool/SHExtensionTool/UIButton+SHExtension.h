@@ -35,4 +35,7 @@ typedef NS_ENUM(NSInteger, UIButtonExtensionImageStyle) {
 //对title的top，与left进行调整，bottom，right暂时无效
 @property (nonatomic,assign) UIEdgeInsets ext_titleLabelEdgeInsets;
 
+//设置背景
+- (void)setBackgroundWithImage:(UIImage *)image edgeInsets:(UIEdgeInsets)edgeInset forState:(UIControlState)state;
+
 @end

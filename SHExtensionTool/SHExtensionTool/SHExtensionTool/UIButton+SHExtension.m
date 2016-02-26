@@ -235,5 +235,11 @@ static char key_layoutSubviews;
     }
 }
 
+- (void)setBackgroundWithImage:(UIImage *)image edgeInsets:(UIEdgeInsets)edgeInset forState:(UIControlState)state
+{
+    UIImage * image_n = [image resizableImageWithCapInsets:edgeInset resizingMode:UIImageResizingModeStretch];
+    [self setBackgroundImage:image_n forState:state];
+}
+
 
 @end
