@@ -9,10 +9,6 @@
 
 @interface UIImage (SHExtension)
 
-// 根据图片名字返回一张缩放过图片
-+ (UIImage *)resizableImageWithName:(NSString *)imageName;
-
-
 //更具Insets 缩放一张图片到指定大小
 - (UIImage*)scaleImageToSize:(CGSize)size resizingInsets:(UIEdgeInsets)insets resizingMode:(UIImageResizingMode)mode;
 

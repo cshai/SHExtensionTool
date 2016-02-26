@@ -9,16 +9,6 @@
 
 @implementation UIImage (SHExtension)
 
-// 根据图片名字返回一张缩放过图片
-+ (UIImage *)resizableImageWithName:(NSString *)imageName{
-    // 普通状态下的图片
-    UIImage *normalImage = [UIImage imageNamed:imageName];
-    CGFloat lefeCap = normalImage.size.width * 0.5;
-    CGFloat topCap = normalImage.size.height * 0.5;
- 
-    return [normalImage resizableImageWithCapInsets:UIEdgeInsetsMake(topCap, lefeCap, topCap, lefeCap)];
-}
-
 - (UIImage*)scaleImageToSize:(CGSize)size resizingInsets:(UIEdgeInsets)insets resizingMode:(UIImageResizingMode)mode
 {
     UIImage *image = [self resizableImageWithCapInsets:insets resizingMode:mode];
